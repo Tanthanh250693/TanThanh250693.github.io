@@ -5,142 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Đá Hoa Cương Tấn Thành</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
     }
     header {
-      background-color: #111;
-      color: white;
+      background: #000;
+      color: gold;
+      padding: 20px;
       text-align: center;
-      padding: 1rem;
-    }
-    header img {
-      max-width: 150px;
-      margin-bottom: 1rem;
     }
     nav {
       background: #333;
-      color: white;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 2rem;
-      padding: 0.8rem 0;
     }
     nav a {
-      color: white;
+      color: #fff;
+      padding: 15px 20px;
+      display: block;
       text-decoration: none;
-      font-weight: bold;
     }
-    .section {
-      padding: 2rem;
+    nav a:hover {
+      background: #555;
+    }
+    .container {
+      padding: 20px;
       max-width: 1200px;
       margin: auto;
     }
-    h2 {
-      color: #333;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
+    .section {
+      margin-bottom: 40px;
     }
-    .product-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
+    .products, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
-    .product {
-      background: white;
-      border: 1px solid #ddd;
+    .product, .project {
+      background: #fff;
+      padding: 10px;
       border-radius: 8px;
-      overflow: hidden;
-      width: calc(33% - 1rem);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .product img {
+    .product img, .project img, .logo img {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .product .info {
-      padding: 1rem;
+      border-radius: 6px;
     }
     footer {
-      background-color: #222;
-      color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 20px;
+      background: #000;
+      color: #fff;
     }
-    @media (max-width: 768px) {
-      .product {
-        width: 100%;
-      }
-      nav {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
+    .logo {
+      margin: 20px auto;
+      max-width: 300px;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://i.imgur.com/XnuzEsy.jpg" alt="Logo Tấn Thành" />
-    <h1>ĐÁ HOA CƯƠNG TẤN THÀNH</h1>
+    <div class="logo">
+      <img src="logo.jpg" alt="Logo Tấn Thành">
+    </div>
+    <h1>Đá Hoa Cương Tấn Thành</h1>
     <p>Thi công toàn quốc - Uy tín, chất lượng, chuyên nghiệp</p>
   </header>
   <nav>
     <a href="#gioi-thieu">Giới thiệu</a>
     <a href="#dich-vu">Dịch vụ</a>
-    <a href="#san-pham">Sản phẩm</a>
+    <a href="#san-pham">Mẫu đá</a>
+    <a href="#thi-cong">Hình ảnh thi công</a>
     <a href="#lien-he">Liên hệ</a>
   </nav>
-  <div class="section" id="gioi-thieu">
-    <h2>Giới thiệu</h2>
-    <p>Đá Hoa Cương Tấn Thành chuyên thi công đá hoa cương: cầu thang, mặt tiền, bếp, lavabo... với mẫu mã đa dạng, giá hợp lý.</p>
-  </div>
-  <div class="section" id="dich-vu">
-    <h2>Dịch vụ</h2>
-    <ul>
-      <li>Ốp lát đá cầu thang, bậc tam cấp</li>
-      <li>Ốp đá bếp, lavabo</li>
-      <li>Ốp mặt tiền, cột đá, tường trang trí</li>
-    </ul>
-  </div>
-  <div class="section" id="san-pham">
-    <h2>Sản phẩm tiêu biểu</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="https://i.imgur.com/JEe4rAG.jpg" alt="Đá Statuario Silk" />
-        <div class="info">
-          <strong>Statuario Silk</strong>
-          <p>Giá: 1,300,000 - 1,600,000 đ/m²</p>
-        </div>
+
+  <div class="container">
+    <section id="gioi-thieu" class="section">
+      <h2>Giới thiệu</h2>
+      <p>Chúng tôi chuyên thi công đá hoa cương cho các hạng mục: cầu thang, mặt tiền, bếp, lavabo, ốp lát trang trí... với nhiều mẫu mã đa dạng, giá cả hợp lý.</p>
+    </section>
+
+    <section id="dich-vu" class="section">
+      <h2>Dịch vụ</h2>
+      <ul>
+        <li>Ốp cầu thang, mặt tiền nhà phố</li>
+        <li>Thi công bếp, lavabo đá granite</li>
+        <li>Cung cấp đá hoa cương theo yêu cầu</li>
+      </ul>
+    </section>
+
+    <section id="san-pham" class="section">
+      <h2>Mẫu đá</h2>
+      <div class="products">
+        <div class="product"><img src="product1.jpg" alt="Đá LMS08"></div>
+        <div class="product"><img src="product2.jpg" alt="Đá LMS09"></div>
+        <div class="product"><img src="product3.jpg" alt="Đá LMS10"></div>
+        <div class="product"><img src="product4.jpg" alt="Đá LMS12"></div>
+        <div class="product"><img src="product5.jpg" alt="Đá Granite"></div>
       </div>
-      <div class="product">
-        <img src="https://i.imgur.com/B9nrlvu.jpg" alt="Đá Volakas" />
-        <div class="info">
-          <strong>Volakas</strong>
-          <p>Giá: 1,300,000 - 1,600,000 đ/m²</p>
-        </div>
+    </section>
+
+    <section id="thi-cong" class="section">
+      <h2>Hình ảnh thi công</h2>
+      <div class="projects">
+        <div class="project"><img src="project1.jpg" alt="Bếp đá đen"></div>
+        <div class="project"><img src="project2.jpg" alt="Lavabo đá granite"></div>
+        <div class="project"><img src="project3.jpg" alt="Đá marble thi công"></div>
+        <div class="project"><img src="project4.jpg" alt="Thi công bậc cầu thang"></div>
+        <div class="project"><img src="project5.jpg" alt="Ốp thang máy"></div>
       </div>
-      <div class="product">
-        <img src="https://i.imgur.com/6VJxloQ.jpg" alt="French Grey" />
-        <div class="info">
-          <strong>French Grey</strong>
-          <p>Giá: 1,300,000 - 1,600,000 đ/m²</p>
-        </div>
-      </div>
-    </div>
+    </section>
   </div>
-  <div class="section" id="lien-he">
-    <h2>Liên hệ</h2>
-    <p>Địa chỉ: 187/47 Trần Hưng Đạo, P. Đông Hòa, TP. Dĩ An, Bình Dương</p>
-    <p>SĐT: <a href="tel:0382333382">0382 333 382</a></p>
-    <p>Fanpage: <a href="https://www.facebook.com/share/16AMKVUnKE/">fb.com/ĐáHoaCươngTấnThành</a></p>
-  </div>
-  <footer>
-    &copy; 2025 Đá Hoa Cương Tấn Thành - MST: 370309487
+
+  <footer id="lien-he">
+    <p>Liên hệ: 0382 333 382 | Zalo, Call 24/7</p>
+    <p>Đá Hoa Cương Tấn Thành &copy; 2025</p>
   </footer>
 </body>
 </html>
